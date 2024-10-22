@@ -29,8 +29,8 @@ $(document).on(':passagedisplay', function (ev) {
 			if (node.nodeType === Node.TEXT_NODE)
 			{
 				node.nodeValue = node.nodeValue.smartQuotes()
-				.replace("...","…")
-				.replace("--","—")
+				.replaceAll("...","…")
+				.replaceAll("--","—")
 			}
 			else
 				iterate_node(node);
