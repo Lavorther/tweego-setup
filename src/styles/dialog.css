@@ -1,0 +1,9 @@
+/* Center Dialog title horizontally */
+#ui-dialog-title {
+    padding: .2em .5em;
+}
+
+/* Make Dialog Close button full height of title bar */
+#ui-dialog-close {
+    height: 100%;
+}
