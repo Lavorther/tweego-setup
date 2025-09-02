@@ -3,3 +3,18 @@ sugarcube-2:
     p:
       name: p
       container: true
+      parameters:
+        -
+      description: |-
+        Will split contents on newlines and wrap each section into its own `<p>` tag. At least one line break is required to consider something a new section, but multiple can be used without issue and will be ignored.
+
+        Usage:
+        ```html
+        <<p>>
+          This is its own paragraph.
+          So is this.
+
+
+          And this. Extra whitespace will be ignored.
+        <</p>>
+        ```
