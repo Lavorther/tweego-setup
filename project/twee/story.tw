@@ -2,12 +2,5 @@
 Tweego Basic Setup
 
 :: Start
-<<p>>
-This is a paragraph.
-
-This is another paragraph.
-Empty lines are optional.
-
-
-Multiple empty lines are possible too.
-<</p>>
+<p>Hello world!</p>
+<p>Paragraph tags required due to global nobr, else all whitespace will be collapsed.</p>

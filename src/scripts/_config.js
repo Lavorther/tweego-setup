@@ -10,18 +10,6 @@ Config.passages.nobr = true;
 //     return false;
 // }
 
-// Wrap lines between `<<p>>` and `<</p>>` in `<p>` tags.
-// Empty lines optional as they are ignored. Any new line becomes its own paragraph.
-Config.passages.onProcess = function (p) {
-	return p.text.replace(
-		/<<p>>((?:.|(?:\r?\n))*)?<<\/p>>/gm,
-		(_, contents) => contents
-		.split(/(?:\r?\n\s*)+/g)
-		.map(el => el.trim().length ? `<p>${el.trim()}</p>` : "")
-		.join("")
-	);
-};
-
 // Replace special characters on processed passages
 $(document).on(':passagedisplay', function (ev) {
 	(function iterate_node(root) {
